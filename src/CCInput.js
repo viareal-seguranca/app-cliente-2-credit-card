@@ -6,16 +6,13 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  ViewPropTypes,
 } from "react-native";
-import { LogBox } from "react-native";
 
 const s = StyleSheet.create({
   baseInputStyle: {
     color: "black",
   },
 });
-LogBox.ignoreLogs(["exported from 'deprecated-react-native-prop-types'."]);
 
 export default class CCInput extends Component {
   static propTypes = {
@@ -27,7 +24,7 @@ export default class CCInput extends Component {
 
     status: PropTypes.oneOf(["valid", "invalid", "incomplete"]),
 
-    containerStyle: ViewPropTypes.style,
+    containerStyle: PropTypes.style,
     inputStyle: Text.propTypes.style,
     labelStyle: Text.propTypes.style,
     validColor: PropTypes.string,
